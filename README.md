@@ -13,66 +13,74 @@
 ## Question 1
 
 Write code that prints all the numbers from 1 to 150, **inclusive.**
+```swift
 
     var num = 1...150
 
     for i in num {
         print(i)
     }
-
+```
 ***
 ## Question 2
 
 Write code that prints all the numbers from 142 to 159, **exclusive.**
+```swift
 
     var num = 142..<159
  
     for i in num {
         print(i)
-        }
+    }
+```
 ***
 ## Question 3
 
 Write code that prints only the even numbers from 15 to 80, **inclusive.**
+```swift
 
     var num = 15...80
 
     for i in num where i % 2 == 0 {
-    print(i)
+        print(i)
     }
-
+```
 ***
 ## Question 4
 
 Write code that prints only the odd numbers from 19 to 51, **inclusive.**
+```swift
 
     var num = 19...51
 
     for i in num where i % 2 == 1 {
-    print(i)
+        print(i)
     }
-
+```
 ***
 ## Question 5
 
 Write code that prints all the numbers that end in a **5** from 1 to 100, **exclusive.**
+```swift
 
     var num = 1..<100
 
     for i in num where i % 10 == 5 {
         print(i)
     }
+```
 ***
 ## Question 6
 
 Write code that prints all the numbers that end in a 7 from 1 to 40, **inclusive.**
+```swift
 
     var num = 1...40
 
     for i in num where i % 10 == 7 {
         print(i)
     }
-
+```
 ***
 ## Question 7
 
@@ -80,13 +88,15 @@ Given a range of numbers from 20 to 150 inclusive, print out all the numbers tha
 
 `Numbers that are divisible by 3`
 
+```swift
+
     var num = 20...150
     
     for i in num where  i % 3 == 0 {
-    print(i)
+        print(i)
     }
 
-
+```
 ***
 ## Question 8
 
@@ -94,45 +104,51 @@ Given a range of numbers from 20 to 150 inclusive, print out all the numbers tha
 
 `Numbers that are divisible by 2 and 3`
 
+```swift
+
     var num = 20...150
 
     for i in num where (i % 3 == 0) && (i % 2 == 0) {
         print(i)
     }
-
+```
 ***
 ## Question 9
 
 Given a range of numbers from 20 to 150 inclusive, print out all the numbers that follows these conditions:
 
 `Numbers that end with a 4`
+```swift
 
     var num = 20...150
 
     for i in num where i % 10 == 4 {
         print(i)
     }
-
+```
 ***
 ## Question 10
 
 Given a range of numbers from 20 to 150, print out all the numbers that follows these conditions:
 
+
 `Print out numbers: 31, 35, 40 to 60.`
+
+```swift
 
     var num = 20...150
 
     for i in num {
-        if i == 31 || i == 35  {
+        if (i == 31 || i == 35) {
             print(i)
             continue
         }
-        if (i >= 40 && i <= 60){
+        if (i >= 40 && i <= 60) {
             print(i)
         }
     }
 
-
+```
 
 ***
 ## Question 11
@@ -170,8 +186,9 @@ Change the code below to make the loop stop executing after it has run 1,000 tim
 
 ```swift
 var i = 5
+var runAThousandTimes = 1000 + i
 
-while (i < 1,005) {
+while (i < runAThousandTimes) {
     i += 1
 }
 ```
@@ -183,8 +200,9 @@ Change the code below to make the loop stop executing after it has run 1,000 tim
 
 ```swift
 var i = 5
+var runAThousandTimes = 1000 + i
 
-while (i < 1005) {
+while (i < runAThousandTimes ) {
     if (i % 2 == 0){
         print(i)
     }
@@ -221,6 +239,8 @@ What's the difference between `break` and `continue`?  Give an example that demo
 
 Continue lets you end that iteration of the loop but brings you to the next iteration of the loop. Break ends the loop entirely. 
 
+```swift
+
     var range = 1...10
 
     for i in range {
@@ -239,7 +259,7 @@ Continue lets you end that iteration of the loop but brings you to the next iter
         print(i)
     }
 
-
+```
 
 ## Question 17
 
@@ -254,16 +274,16 @@ for i in 1...10 {
 }
 ```
 
-[x]1
-[x]2
-[x]3
-[]4
-[]5
-[]6
-[]7
-[x]8
-[x]9
-[x]10
+[ x ] 1
+[ x ] 2
+[ x ] 3
+[ ] 4
+[ ] 5
+[ ] 6
+[ ] 7
+[ x ] 8
+[ x ] 9
+[ x ] 10
 
 
 
@@ -281,16 +301,16 @@ for i in 1...10 {
 }
 ```
 
-[x]1
-[x]2
-[x]3
-[]4
-[]5
-[]6
-[]7
-[]8
-[]9
-[]10
+[ x ] 1
+[ x ] 2
+[ x ] 3
+[ ] 4
+[ ] 5
+[ ] 6
+[ ] 7
+[ ] 8
+[ ] 9
+[ ] 10
 
 
 ***
@@ -319,31 +339,30 @@ x = 3, y = 1
 ## Question 20
 
 Write code that prints out all the points in the area bounded by (0,0), (10,0), (0,10) and (10,10) **where** x and y are both integers.
+```swift
 
-    var xRange = 0...10
-    var yRange = 0...10
-
-    for x in xRange {
-    for y in yRange{
-    print("(\(x), \(y))")
+    var range = 0...10
+    
+    for x in range {
+        for y in range {
+            print("(\(x), \(y))")
+        }
     }
-
-    }
-
+```
 ***
 ## Question 21
 
 Write code that prints out all the points in the area bounded by (0,0), (10,0), (0,10) and (10,10) **where** the difference of x and y is at least 5, and x and y are both integers.
+```swift
 
-    var xRange = 0...10
-    var yRange = 0...10
+    var range = 0...10
 
-    for x in xRange {
-        for y in yRange where abs(x - y) >= 5 {
+    for x in range {
+        for y in range where abs(x - y) >= 5 {
             print("(\(x), \(y))")
         }
     }
-
+```
 ***
 ## Question 22
 
@@ -384,15 +403,15 @@ Output:
 **
 
 var N = 2
-var range1 = 1...N
+var range = 1...N
 
 
-    for _ in range1 {
-        for _ in range1 {
-            print("*",terminator: " ")
-        }
-    print("")
+for _ in range {
+    for _ in range {
+        print("*", terminator: " ")
     }
+    print("")
+}
 
 ```
 
@@ -406,11 +425,11 @@ Output:
 ***
 
 var N = 3
-var range1 = 1...N
+var range = 1...N
 
-for _ in range1 {
-    for _ in range1 {
-        print("*",terminator: " ")
+for _ in range {
+    for _ in range {
+        print("*", terminator: " ")
     }
     print("")
 }
